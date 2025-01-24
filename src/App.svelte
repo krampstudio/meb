@@ -18,7 +18,7 @@
 </main>
 <style>
   main {
-    background-image: url('./assets/meb.webp');
+    background-image: url('./meb.webp');
     background-size: cover;
     background-position: center;
   }
