@@ -12,7 +12,7 @@
   </div>
   <footer class="m-5 flex-none flex items-center justify-center">
      <span class="bg-gray-900/50 px-2 py-0.5 rounded"> 
-      <a href="mailto:contact@meb-music.fr" class="cursor-pointer underline">Contact / Book a show</a> - 
+      <a href="mailto:chevrier.bertrand@gmail.com" class="cursor-pointer underline">Contact / Book a show</a> - 
       M.e.B @ 2025 - More to come soon...</span>
   </footer> 
 </main>
