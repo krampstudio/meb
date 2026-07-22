@@ -35,10 +35,10 @@
       {$dict.contact.booking}
     </p>
     <a
-      href="mailto:booking@example.com"
+      href="mailto:chevrier.bertrand@gmail.com"
       class="mt-4 inline-block font-mono text-sm tracking-widest text-accent-cyan hover:text-fg border-b border-accent-cyan hover:border-fg pb-1 transition-colors"
     >
-      booking@example.com
+      chevrier.bertrand@gmail.com
     </a>
   </div>
 </section>
