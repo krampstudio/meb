@@ -4,10 +4,11 @@
   import { dict } from "../i18n.js";
 
   const socials = [
-    { label: "Instagram", href: "#" },
-    { label: "Bandcamp", href: "#" },
-    { label: "Spotify", href: "#" },
-    { label: "YouTube", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/m.e.b_band" },
+    { label: "YouTube", href: "https://www.youtube.com/@meb-band" },
+    { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61574433269708" },
+    { label: "Bandcamp", href: "" },
+    { label: "Spotify", href: "" },
   ];
 </script>
 
