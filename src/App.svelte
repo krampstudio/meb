@@ -6,7 +6,7 @@
   import Crew from "./lib/sections/Crew.svelte";
   import Music from "./lib/sections/Music.svelte";
   import Shows from "./lib/sections/Shows.svelte";
-  import Gallery from "./lib/sections/Gallery.svelte";
+  import BlackFriday from "./lib/sections/BlackFriday.svelte";
   import Contact from "./lib/sections/Contact.svelte";
   import { dict } from "./lib/i18n.js";
 </script>
@@ -23,7 +23,7 @@
   <Crew />
   <Music />
   <Shows />
-  <Gallery />
+  <BlackFriday />
   <Contact />
 
   <footer

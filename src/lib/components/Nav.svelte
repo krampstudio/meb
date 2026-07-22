@@ -10,7 +10,7 @@
     { href: "#crew", key: "crew" },
     { href: "#music", key: "music" },
     { href: "#shows", key: "shows" },
-    { href: "#gallery", key: "gallery" },
+    { href: "#blackfriday", key: "blackfriday" },
     { href: "#contact", key: "contact" },
   ];
 

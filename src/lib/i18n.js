@@ -6,7 +6,7 @@ const en = {
     crew: "The Crew",
     music: "Music",
     shows: "Shows",
-    gallery: "Gallery",
+    blackfriday: "Black Friday",
     contact: "Contact",
   },
   hero: {
@@ -49,8 +49,18 @@ const en = {
       { date: "2025-04-20", venue: "Le Ferrailleur", city: "Nantes", ticket: "#" },
     ],
   },
-  gallery: {
-    title: "Gallery",
+  blackfriday: {
+    title: "Black Friday",
+    tagline: "One of our songs. Coming when the timer hits zero.",
+    dropsIn: "Drops in",
+    days: "days",
+    hrs: "hrs",
+    min: "min",
+    sec: "sec",
+    itsToday: "It's Black Friday. Drop the song.",
+    play: "Play sample",
+    pause: "Pause",
+    sampleSoon: "Sample coming soon",
   },
   contact: {
     title: "Contact",
@@ -66,7 +76,7 @@ const fr = {
     crew: "La Crew",
     music: "Musique",
     shows: "Concerts",
-    gallery: "Galerie",
+    blackfriday: "Black Friday",
     contact: "Contact",
   },
   hero: {
@@ -109,8 +119,18 @@ const fr = {
       { date: "2025-04-20", venue: "Le Ferrailleur", city: "Nantes", ticket: "#" },
     ],
   },
-  gallery: {
-    title: "Galerie",
+  blackfriday: {
+    title: "Black Friday",
+    tagline: "L'une de nos chansons. Quand le compteur tombe à zéro.",
+    dropsIn: "Sortie dans",
+    days: "jours",
+    hrs: "h",
+    min: "min",
+    sec: "s",
+    itsToday: "C'est Black Friday. Larguez le morceau.",
+    play: "Écouter l'extrait",
+    pause: "Pause",
+    sampleSoon: "Extrait bientôt disponible",
   },
   contact: {
     title: "Contact",
