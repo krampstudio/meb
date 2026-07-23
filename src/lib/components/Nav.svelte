@@ -85,7 +85,7 @@
             class="text-sm uppercase tracking-widest transition-colors {activeSection ===
             link.href.slice(1)
               ? 'text-accent-cyan'
-              : 'text-fg-dim hover:text-fg'}"
+              : 'text-fg/80 hover:text-fg'}"
           >
             {$dict.nav[link.key]}
           </a>
@@ -137,7 +137,7 @@
             class="block text-sm uppercase tracking-widest transition-colors {activeSection ===
             link.href.slice(1)
               ? 'text-accent-cyan'
-              : 'text-fg-dim hover:text-fg'}"
+              : 'text-fg/80 hover:text-fg'}"
           >
             {$dict.nav[link.key]}
           </a>

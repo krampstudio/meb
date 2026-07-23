@@ -1,11 +1,9 @@
 <script>
-  /** @type {{ title: string, date: string, tracks: number, cta: string }} */
-  let { title, date, tracks, cta } = $props();
+  /** @type {{ title: string, date?: string, tracks?: number, cta?: string, comingSoon?: boolean, soonLabel?: string, tag?: string }} */
+  let { title, date, tracks, cta, comingSoon, soonLabel, tag } = $props();
 </script>
 
-<article
-  class="group border border-line bg-bg-alt flex flex-col"
->
+<article class="group border border-line bg-bg-alt flex flex-col">
   <div
     class="aspect-square relative overflow-hidden flex items-center justify-center"
   >
@@ -27,14 +25,28 @@
       <p
         class="mt-1 font-mono text-[0.65rem] text-fg-dim uppercase tracking-widest"
       >
-        {date} · {tracks} tracks
+        {#if comingSoon}
+          {tag ?? soonLabel}
+        {:else}
+          {date} · {tracks} tracks
+        {/if}
       </p>
     </div>
-    <a
-      href="#"
-      class="font-mono text-[0.65rem] uppercase tracking-widest text-accent-cyan hover:text-fg border border-accent-cyan hover:border-fg px-3 py-1 transition-colors"
-    >
-      {cta} →
-    </a>
+    {#if comingSoon}
+      <span
+        class="font-mono text-[0.65rem] uppercase tracking-widest text-fg-dim border border-line px-3 py-1 cursor-not-allowed select-none"
+        aria-disabled="true"
+        title={soonLabel}
+      >
+        {soonLabel}
+      </span>
+    {:else}
+      <a
+        href="#"
+        class="font-mono text-[0.65rem] uppercase tracking-widest text-accent-cyan hover:text-fg border border-accent-cyan hover:border-fg px-3 py-1 transition-colors"
+      >
+        {cta} →
+      </a>
+    {/if}
   </div>
 </article>

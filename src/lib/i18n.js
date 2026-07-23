@@ -31,22 +31,21 @@ const en = {
   music: {
     title: "Music",
     cta: "Listen",
+    comingSoon: "Coming soon",
     items: [
-      { title: "Single 01", date: "2025", tracks: 3 },
-      { title: "Single 02", date: "2025", tracks: 2 },
-      { title: "Single 03", date: "2024", tracks: 4 },
+      { title: "Le Crabe", comingSoon: true, tag: "Single" },
     ],
   },
   shows: {
     title: "Shows",
+    upcoming: "Upcoming",
+    stayTuned: "Stay tuned — we're booking new dates.",
+    past: "Past shows",
     date: "Date",
     venue: "Venue",
     city: "City",
-    tickets: "Tickets",
-    rows: [
-      { date: "2025-03-15", venue: "Le Gibus", city: "Paris", ticket: "#" },
-      { date: "2025-04-02", venue: "La Laiterie", city: "Strasbourg", ticket: "#" },
-      { date: "2025-04-20", venue: "Le Ferrailleur", city: "Nantes", ticket: "#" },
+    pastRows: [
+      { date: "2025-05-24", venue: "Shaka Pub", city: "Chaource" },
     ],
   },
   blackfriday: {
@@ -101,22 +100,21 @@ const fr = {
   music: {
     title: "Musique",
     cta: "Écouter",
+    comingSoon: "Bientôt disponible",
     items: [
-      { title: "Single 01", date: "2025", tracks: 3 },
-      { title: "Single 02", date: "2025", tracks: 2 },
-      { title: "Single 03", date: "2024", tracks: 4 },
+      { title: "Le Crabe", comingSoon: true, tag: "Single" },
     ],
   },
   shows: {
     title: "Concerts",
+    upcoming: "À venir",
+    stayTuned: "Restez connectés — on prépare de nouvelles dates.",
+    past: "Concerts passés",
     date: "Date",
     venue: "Salle",
     city: "Ville",
-    tickets: "Billets",
-    rows: [
-      { date: "2025-03-15", venue: "Le Gibus", city: "Paris", ticket: "#" },
-      { date: "2025-04-02", venue: "La Laiterie", city: "Strasbourg", ticket: "#" },
-      { date: "2025-04-20", venue: "Le Ferrailleur", city: "Nantes", ticket: "#" },
+    pastRows: [
+      { date: "2025-05-24", venue: "Shaka Pub", city: "Chaource" },
     ],
   },
   blackfriday: {
