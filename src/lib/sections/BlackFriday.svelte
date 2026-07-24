@@ -77,12 +77,6 @@
   <div class="max-w-4xl mx-auto text-center">
     <SectionTitle text={$dict.blackfriday.title} />
 
-    <p
-      class="mt-8 font-mono text-xs md:text-sm uppercase tracking-widest text-fg-dim"
-    >
-      {$dict.blackfriday.tagline}
-    </p>
-
     <!-- Countdown -->
     {#if parts.d > 0 || parts.h > 0 || parts.m > 0 || parts.s > 0}
       <p
@@ -170,9 +164,6 @@
         <span>{$dict.blackfriday.play}</span>
       {/if}
     </button>
-    <p class="mt-3 font-mono text-[0.55rem] uppercase tracking-widest text-fg-dim/60">
-      {$dict.blackfriday.sampleSoon}
-    </p>
 
     <audio
       bind:this={audio}

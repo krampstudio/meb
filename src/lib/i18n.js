@@ -119,7 +119,6 @@ const fr = {
   },
   blackfriday: {
     title: "Black Friday",
-    tagline: "L'une de nos chansons. Quand le compteur tombe à zéro.",
     dropsIn: "Sortie dans",
     days: "jours",
     hrs: "h",
@@ -128,7 +127,6 @@ const fr = {
     itsToday: "C'est Black Friday. Larguez le morceau.",
     play: "Écouter l'extrait",
     pause: "Pause",
-    sampleSoon: "Aperçu 25s",
   },
   contact: {
     title: "Contact",
