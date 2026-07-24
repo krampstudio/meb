@@ -56,12 +56,7 @@
   const pad = (n) => String(n).padStart(2, "0");
 
   function togglePlay() {
-    // Sample wiring placeholder — the actual audio src will be added later.
-    // When an <audio> element with the sample exists, this will toggle play/pause.
-    if (!audio) {
-      playing = !playing; // visual placeholder toggle
-      return;
-    }
+    if (!audio) return;
     if (audio.paused) {
       audio.play();
       playing = true;
@@ -69,6 +64,12 @@
       audio.pause();
       playing = false;
     }
+  }
+
+  function onAudioEnded() {
+    playing = false;
+    // rewind so the next play restarts from the start
+    if (audio) audio.currentTime = 0;
   }
 </script>
 
@@ -151,7 +152,7 @@
       </p>
     {/if}
 
-    <!-- Play-sample placeholder (audio src to be wired in later) -->
+    <!-- Play 25s sample -->
     <button
       onclick={togglePlay}
       class="mt-14 inline-flex items-center gap-3 border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-bg transition-colors px-6 py-3 font-mono text-xs md:text-sm uppercase tracking-widest"
@@ -173,8 +174,11 @@
       {$dict.blackfriday.sampleSoon}
     </p>
 
-    <!-- TODO: wire the real sample here and remove the placeholder toggle above.
-         <audio bind:this={audio} src="...black-friday-sample.mp3" preload="none"></audio>
-    -->
+    <audio
+      bind:this={audio}
+      src="/assets/audio/black-friday-sample.mp3"
+      preload="metadata"
+      onended={onAudioEnded}
+    ></audio>
   </div>
 </section>

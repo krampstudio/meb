@@ -59,7 +59,7 @@ const en = {
     itsToday: "It's Black Friday. Drop the song.",
     play: "Play sample",
     pause: "Pause",
-    sampleSoon: "Sample coming soon",
+    sampleSoon: "25s preview",
   },
   contact: {
     title: "Contact",
@@ -128,7 +128,7 @@ const fr = {
     itsToday: "C'est Black Friday. Larguez le morceau.",
     play: "Écouter l'extrait",
     pause: "Pause",
-    sampleSoon: "Extrait bientôt disponible",
+    sampleSoon: "Aperçu 25s",
   },
   contact: {
     title: "Contact",
