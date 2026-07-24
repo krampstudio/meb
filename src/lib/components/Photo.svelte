@@ -53,15 +53,17 @@
     </div>
 
     <!-- Back: same photo, super distorted glitch -->
-    <div
-      class="crew-card__face crew-card__face--back glitch-img"
-      style="--glitch-src: url('{frontSrc}')"
-    >
-      <div class="glitch-img__base"></div>
-      <div class="glitch-img__rgb glitch-img__r"></div>
-      <div class="glitch-img__rgb glitch-img__g"></div>
-      <div class="glitch-img__rgb glitch-img__b"></div>
-      <div class="glitch-img__scan"></div>
+    <div class="crew-card__face crew-card__face--back">
+      <div
+        class="glitch-img"
+        style="--glitch-src: url('{frontSrc}')"
+      >
+        <div class="glitch-img__base"></div>
+        <div class="glitch-img__rgb glitch-img__r"></div>
+        <div class="glitch-img__rgb glitch-img__g"></div>
+        <div class="glitch-img__rgb glitch-img__b"></div>
+        <div class="glitch-img__scan"></div>
+      </div>
       <span
         class="absolute top-2 left-2 z-20 font-mono text-[0.55rem] uppercase tracking-widest text-accent-red bg-bg/60 px-1.5 py-0.5 pointer-events-none"
       >
@@ -98,8 +100,8 @@
 
   /* --- Super-distorted glitch image (back face) --- */
   .glitch-img {
-    position: relative;
-    aspect-ratio: 3 / 4;
+    position: absolute;
+    inset: 0;
     overflow: hidden;
   }
   .glitch-img__base,
