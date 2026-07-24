@@ -93,6 +93,7 @@
   .crew-card__face--back {
     position: absolute;
     inset: 0;
+    transform: rotateY(180deg);
     overflow: hidden;
     background: var(--color-bg);
     border: 1px solid var(--color-line);
