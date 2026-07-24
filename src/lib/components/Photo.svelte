@@ -1,6 +1,6 @@
 <script>
-  /** @type {{ name: string, instrument: string, flipHint?: string, flipBack?: string, photo?: string }} */
-  let { name, instrument, flipHint, flipBack, photo } = $props();
+  /** @type {{ name: string, instrument: string, photo?: string }} */
+  let { name, instrument, photo } = $props();
 
   const src = photo ?? `/assets/photos/${name.toLowerCase()}-back.jpg`;
   const frontSrc = `/assets/photos/${name.toLowerCase()}-front.jpg`;
@@ -30,7 +30,7 @@
           {src}
           alt="{name} — {instrument}"
           loading="lazy"
-          class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+          class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
         />
       </div>
       <div
@@ -45,11 +45,6 @@
           {instrument}
         </p>
       </div>
-      <span
-        class="absolute top-2 right-2 font-mono text-[0.55rem] uppercase tracking-widest text-fg-dim/70 border border-line/60 bg-bg/40 px-1.5 py-0.5 backdrop-blur-sm pointer-events-none"
-      >
-        {flipHint ?? ""}
-      </span>
     </div>
 
     <!-- Back: same photo, super distorted glitch -->
@@ -64,11 +59,6 @@
         <div class="glitch-img__rgb glitch-img__b"></div>
         <div class="glitch-img__scan"></div>
       </div>
-      <span
-        class="absolute top-2 left-2 z-20 font-mono text-[0.55rem] uppercase tracking-widest text-accent-red bg-bg/60 px-1.5 py-0.5 pointer-events-none"
-      >
-        {flipBack ?? ""}
-      </span>
     </div>
   </div>
 </article>

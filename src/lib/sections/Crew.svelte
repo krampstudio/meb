@@ -14,9 +14,6 @@
         <Photo
           name={member.name}
           instrument={member.instrument}
-          bio={member.bio}
-          flipHint={$dict.crew.flipHint}
-          flipBack={$dict.crew.flipBack}
         />
       {/each}
     </div>
