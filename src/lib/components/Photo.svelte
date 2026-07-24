@@ -30,7 +30,7 @@
           {src}
           alt="{name} — {instrument}"
           loading="lazy"
-          class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+          class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
         />
       </div>
       <div
