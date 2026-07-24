@@ -1,8 +1,9 @@
 <script>
-  /** @type {{ name: string, instrument: string, bio?: string, flipHint?: string, flipBack?: string, photo?: string }} */
-  let { name, instrument, bio, flipHint, flipBack, photo } = $props();
+  /** @type {{ name: string, instrument: string, flipHint?: string, flipBack?: string, photo?: string }} */
+  let { name, instrument, flipHint, flipBack, photo } = $props();
 
   const src = photo ?? `assets/photos/${name.toLowerCase()}-back.jpg`;
+  const frontSrc = `assets/photos/${name.toLowerCase()}-front.jpg`;
 
   let flipped = $state(false);
 </script>
@@ -51,31 +52,21 @@
       </span>
     </div>
 
-    <!-- Back: bio -->
-    <div class="crew-card__face crew-card__face--back">
-      <div class="aspect-[3/4] flex flex-col justify-between p-4">
-        <div>
-          <h3
-            class="font-display text-2xl tracking-wider leading-none text-accent-cyan glitch"
-            data-text={name}
-          >
-            {name}
-          </h3>
-          <p
-            class="mt-1 font-mono text-[0.6rem] text-fg-dim uppercase tracking-widest"
-          >
-            {instrument}
-          </p>
-        </div>
-        <p class="text-sm md:text-base leading-relaxed text-fg/85 font-light">
-          {bio}
-        </p>
-        <span
-          class="font-mono text-[0.55rem] uppercase tracking-widest text-fg-dim/70 self-end border border-line/60 px-1.5 py-0.5"
-        >
-          {flipBack ?? ""}
-        </span>
-      </div>
+    <!-- Back: same photo, super distorted glitch -->
+    <div
+      class="crew-card__face crew-card__face--back glitch-img"
+      style="--glitch-src: url('{frontSrc}')"
+    >
+      <div class="glitch-img__base"></div>
+      <div class="glitch-img__rgb glitch-img__r"></div>
+      <div class="glitch-img__rgb glitch-img__g"></div>
+      <div class="glitch-img__rgb glitch-img__b"></div>
+      <div class="glitch-img__scan"></div>
+      <span
+        class="absolute top-2 left-2 z-20 font-mono text-[0.55rem] uppercase tracking-widest text-accent-red bg-bg/60 px-1.5 py-0.5 pointer-events-none"
+      >
+        {flipBack ?? ""}
+      </span>
     </div>
   </div>
 </article>
@@ -100,9 +91,91 @@
   .crew-card__face--back {
     position: absolute;
     inset: 0;
-    transform: rotateY(180deg);
+    overflow: hidden;
     background: var(--color-bg);
     border: 1px solid var(--color-line);
+  }
+
+  /* --- Super-distorted glitch image (back face) --- */
+  .glitch-img {
+    position: relative;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
+  }
+  .glitch-img__base,
+  .glitch-img__rgb {
+    position: absolute;
+    inset: -10px; /* bleed room for jitter */
+    background-image: var(--glitch-src);
+    background-size: cover;
+    background-position: center;
+  }
+  .glitch-img__base {
+    filter: contrast(2.2) saturate(2.6) brightness(0.8) hue-rotate(-12deg);
+    animation: glitch-jitter 0.32s steps(2, end) infinite;
+  }
+  /* RGB-split ghosts — same image, screen-blended, hue-pushed, offset & jittered */
+  .glitch-img__rgb {
+    mix-blend-mode: screen;
+    opacity: 0.9;
+  }
+  .glitch-img__r {
+    filter: brightness(1.1) sepia(1) hue-rotate(-50deg) saturate(4);
+    animation: glitch-r 0.28s steps(2, end) infinite;
+  }
+  .glitch-img__g {
+    filter: brightness(1) sepia(1) hue-rotate(70deg) saturate(5);
+    animation: glitch-g 0.34s steps(2, end) infinite;
+  }
+  .glitch-img__b {
+    filter: brightness(1.15) sepia(1) hue-rotate(170deg) saturate(5);
+    animation: glitch-b 0.26s steps(2, end) infinite;
+  }
+
+  /* drifting scanline overlay */
+  .glitch-img__scan {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0.4) 3px,
+      rgba(0, 0, 0, 0.4) 4px
+    );
+    mix-blend-mode: multiply;
+    animation: scan-drift 1.6s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes glitch-jitter {
+    0%, 100% { transform: translate(0, 0) skewX(0); }
+    20%      { transform: translate(-3px, 2px) skewX(-3deg); }
+    40%      { transform: translate(4px, -1px) scale(1.04); }
+    60%      { transform: translate(-2px, 2px) skewX(2deg); }
+    80%      { transform: translate(2px, -2px) scale(1.02); }
+  }
+  @keyframes glitch-r {
+    0%, 100% { transform: translateX(-12px) skewX(-4deg); }
+    50%      { transform: translateX(16px) skewX(3deg) scale(1.06); }
+  }
+  @keyframes glitch-g {
+    0%, 100% { transform: translate(10px, 2px); }
+    50%      { transform: translate(-14px, -3px) skewX(-2deg); }
+  }
+  @keyframes glitch-b {
+    0%, 100% { transform: translate(14px, -2px) skewX(4deg); }
+    50%      { transform: translate(-10px, 2px) scale(1.05); }
+  }
+  @keyframes scan-drift {
+    from { background-position-y: 0; }
+    to   { background-position-y: 10px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glitch-img__r,
+    .glitch-img__g,
+    .glitch-img__b,
+    .glitch-img__scan { animation: none; }
   }
 </style>
