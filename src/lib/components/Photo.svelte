@@ -2,8 +2,8 @@
   /** @type {{ name: string, instrument: string, flipHint?: string, flipBack?: string, photo?: string }} */
   let { name, instrument, flipHint, flipBack, photo } = $props();
 
-  const src = photo ?? `assets/photos/${name.toLowerCase()}-back.jpg`;
-  const frontSrc = `assets/photos/${name.toLowerCase()}-front.jpg`;
+  const src = photo ?? `/assets/photos/${name.toLowerCase()}-back.jpg`;
+  const frontSrc = `/assets/photos/${name.toLowerCase()}-front.jpg`;
 
   let flipped = $state(false);
 </script>
