@@ -1,19 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>M.e.B — Punk rock alternatif de l'Est de la France</title>
+    <meta
+      name="description"
+      content="M.e.B est un groupe de punk rock alternatif de l'Est de la France, né en 2023. Un groupe d'amis qui mêle punk rock, alternative rock et influences diverses, avec des chansons en français. Concerts, musique et contact."
+    />
+    <meta name="author" content="M.e.B" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <link rel="canonical" href="https://krampstudio.github.io/meb/" />
+
+    <!-- Icons / PWA -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" sizes="16x16 32x32" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/app.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="M.e.B the french punk rock band" />
-    <title>M.e.B</title>
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="M.e.B" />
+    <meta property="og:title" content="M.e.B — Punk rock alternatif de l'Est de la France" />
+    <meta
+      property="og:description"
+      content="Groupe de punk rock alternatif né en 2023 dans l'Est de la France. Un mix de punk rock, alternative rock et influences diverses."
+    />
+    <meta property="og:url" content="https://krampstudio.github.io/meb/" />
+    <meta property="og:image" content="https://krampstudio.github.io/meb/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="M.e.B — visuel du groupe punk rock alternatif"
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="M.e.B — Punk rock alternatif de l'Est de la France" />
+    <meta
+      name="twitter:description"
+      content="Groupe de punk rock alternatif né en 2023 dans l'Est de la France. Un mix de punk rock, alternative rock et influences diverses."
+    />
+    <meta name="twitter:image" content="https://krampstudio.github.io/meb/assets/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="M.e.B — visuel du groupe punk rock alternatif"
+    />
+
+    <!-- Fonts & styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/app.css" />
+
+    <!-- Structured data: MusicGroup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "M.e.B",
+        "alternateName": "M.e.B band",
+        "url": "https://krampstudio.github.io/meb/",
+        "image": "https://krampstudio.github.io/meb/assets/meb-visu.png",
+        "logo": "https://krampstudio.github.io/meb/assets/apple-touch-icon.png",
+        "description": "M.e.B est un groupe de punk rock alternatif de l'Est de la France, né en 2023. Un groupe d'amis qui mêle punk rock, alternative rock et influences diverses.",
+        "foundingDate": "2023",
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Grand Est",
+            "addressCountry": "FR"
+          }
+        },
+        "genre": ["Punk rock", "Alternative rock"],
+        "email": "mailto:chevrier.bertrand@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/m.e.b_band",
+          "https://www.youtube.com/@meb-band",
+          "https://www.facebook.com/profile.php?id=61574433269708"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

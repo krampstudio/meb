@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krampstudio.github.io/meb/sitemap.xml
