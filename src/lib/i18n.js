@@ -15,7 +15,7 @@ const en = {
   },
   about: {
     title: "About",
-    body: "M.e.B is a band from the East of France, born in 2023. We are a group of friends, with experiences in other bands, who love to play music together. Our style is a mix of punk rock, alternative rock, and diverse influences. Most of our songs are in French and talk about our lives, our experiences, our feelings, and what pisses us off.",
+    body: "M.e.B is a band from the East of France, born in 2023. We are a group of friends, with experiences in other bands, who love to play music together. Our style is a mix of punk rock, alternative rock, and diverse influences.",
   },
   crew: {
     title: "The Crew",
@@ -66,7 +66,7 @@ const en = {
     follow: "Follow",
     booking: "Booking",
   },
-  footer: "M.e.B © 2025",
+  footer: "M.e.B © 2026",
 };
 
 const fr = {
@@ -84,7 +84,7 @@ const fr = {
   },
   about: {
     title: "À propos",
-    body: "M.e.B est un groupe de l'Est de la France, né en 2023. Nous sommes un groupe d'amis, avec des expériences dans d'autres formations, qui aiment jouer de la musique ensemble. Notre style est un mix de punk rock, alternative rock et influences diverses. La plupart de nos chansons sont en français et parlent de nos vies, de nos expériences, de nos sentiments et de ce qui nous fait chier.",
+    body: "M.e.B est un groupe de l'Est de la France, né en 2023. Nous sommes un groupe d'amis, avec des expériences dans d'autres formations, qui aiment jouer de la musique ensemble. M.e.B c'est un mix de punk rock, alternative rock et influences diverses.",
   },
   crew: {
     title: "La Crew",
@@ -133,7 +133,7 @@ const fr = {
     follow: "Suivre",
     booking: "Booking",
   },
-  footer: "M.e.B © 2025",
+  footer: "M.e.B © 2026",
 };
 
 function detect() {
