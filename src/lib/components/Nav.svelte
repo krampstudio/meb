@@ -69,7 +69,7 @@
     <a
       href="#hero"
       onclick={(e) => handleClick(e, "#hero")}
-      class="font-display text-2xl tracking-[0.2em] glitch"
+      class="font-display text-2xl tracking-[0.2em] glitch text-fg"
       data-text="M.e.B"
       aria-label="M.e.B — home"
     >
@@ -85,7 +85,7 @@
             class="text-sm uppercase tracking-widest transition-colors {activeSection ===
             link.href.slice(1)
               ? 'text-accent-cyan'
-              : 'text-fg/80 hover:text-fg'}"
+              : 'text-fg hover:text-accent-cyan'}"
           >
             {$dict.nav[link.key]}
           </a>
@@ -137,7 +137,7 @@
             class="block text-sm uppercase tracking-widest transition-colors {activeSection ===
             link.href.slice(1)
               ? 'text-accent-cyan'
-              : 'text-fg/80 hover:text-fg'}"
+              : 'text-fg hover:text-accent-cyan'}"
           >
             {$dict.nav[link.key]}
           </a>
