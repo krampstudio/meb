@@ -103,7 +103,7 @@
     </ul>
 
     <button
-      class="md:hidden text-fg"
+      class="md:hidden text-white hover:text-accent-cyan transition-colors"
       onclick={() => (mobileOpen = !mobileOpen)}
       aria-label="Toggle menu"
       aria-expanded={mobileOpen}

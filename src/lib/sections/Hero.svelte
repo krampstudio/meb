@@ -36,8 +36,15 @@
   </div>
 
   <!-- Scroll indicator -->
-  <div
-    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-70"
+  <button
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+    onclick={() => {
+      const el = document.getElementById("about");
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: "smooth" });
+    }}
+    aria-label={$dict.hero.scroll}
   >
     <span
       class="font-mono text-[0.65rem] uppercase tracking-widest text-fg-dim"
@@ -55,5 +62,5 @@
     >
       <path d="M10 4v12M5 11l5 5 5-5" />
     </svg>
-  </div>
+  </button>
 </section>
