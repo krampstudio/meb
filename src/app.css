@@ -64,7 +64,6 @@ body {
   inset: 0;
   pointer-events: none;
   mix-blend-mode: screen;
-  white-space: nowrap;
 }
 
 .glitch::before {
